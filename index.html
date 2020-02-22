@@ -4,25 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>launchpad</title>
-    <link ref="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-    <div class="key">
-        <kbd class="A">A</kbd>
-        <kbd>S</kbd>
-        <kbd>D</kbd>
-        <kbd>F</kbd>
-        <kbd>G</kbd>
-        <kbd>H</kbd>
-        <kbd>J</kbd>
-        <kbd>K</kbd>
-        <kbd>L</kbd>
+<div class="container">
+    <div class="grid-container">
+        <div data-key="65" class="box">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox"/>
+            <input type="range" min="1000" max="5000" value="1000" class="slider"/>
+        </div>
+        <div data-key="83" class="box">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox"/>
+            <input type="range" min="1000" max="5000" value="1000" class="slider"/>
+        </div>
+        <div data-key="68" class="box">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox">
+            <input type="range" min="1000" max="5000" value="1000" class="slider">
+        </div>
+        <div data-key="70" class="box">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox">
+            <input type="range" min="1000" max="5000" value="1000" class="slider">
+        </div>
+        <div data-key="71" class="box">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox">
+            <input type="range" min="1000" max="5000" value="1000" class="slider">
+        </div>
+        <div data-key="72" class="box">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox">
+            <input type="range" min="1000" max="5000" value="1000" class="slider">
+        </div>
+            <div data-key="74" class="box">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox">
+            <input type="range" min="1000" max="5000" value="1000" class="slider">
+        </div>
+            <div data-key="75" class="box">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox">
+            <input type="range" min="1000" max="5000" value="1000" class="slider">
+        </div>
+            <div data-key="76" class="box">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+            <label for="check">repeat</label>
+            <input id="check" type="checkbox">
+            <input type="range" min="1000" max="5000" value="1000" class="slider">
+        </div>
     </div>
-    <div>
-        <p id="history"></p>
-    </div>
-    <button class="clear" onclick="clearBtn()">Clear</button>
+        <div class="element">
+            <p id="history"></p>
+            <button class="clearBtn" onclick="clearBtn()">Clear</button>
+        </div>
 </div>
     <audio data-key="65" src="sounds/clap.wav"></audio>
     <audio data-key="83" src="sounds/hihat.wav"></audio>
@@ -34,5 +89,5 @@
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
 </body>
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </html>

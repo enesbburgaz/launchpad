@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto' ;
+    text-align: center;
+    background-color: goldenrod;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 150px 150px 150px ;
+    grid-template-rows: 150px 150px 150px ;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px ;
+    justify-content: center;
+    align-items: center;
+  }
+kbd {
+    display: block;
+    font-size: 50px;
+}
+span{
+    display: block;
+}
+.box{
+    box-shadow: 0 0 15px black;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: all .07s ease;  
+    background-color: white;
+}
+.playing {
+    transform: scale(1.1);
+    border-color: rgb(39, 39, 231);
+    box-shadow: 0 0 40px rgb(39, 39, 231);;
+  }
+  .sound {
+    text-transform: uppercase;
+ }
+
+  
